@@ -1,0 +1,148 @@
+.cthulhu7 .header-image {
+    max-width: 175px;
+}
+
+.cthulhu7 .header-image img {
+    width: 100%;
+    height: auto;
+}
+
+.cthulhu7 .chr-chart {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30px 30px;
+    grid-auto-flow: column;
+}
+
+.cthulhu7 .chr-cell {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.cthulhu7 .chr-label {
+    font-size: large;
+    text-align: right;
+    padding: 3px 0 0 0;
+}
+
+.cthulhu7 .chr-rating {
+    padding: 0 0 0 5px;
+}
+
+.cthulhu7 .resource-chart {
+    margin: 5px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-flow: row;
+}
+
+.cthulhu7 .resource-cell {
+    display: grid;
+    grid-template: 
+        "r-label r-label" 25px
+        "r-max   r-now"   20px / 4fr 5fr;
+}
+
+.cthulhu7 .resource-label {
+    font-size: large;
+    text-align: center;
+    grid-area: r-label;
+}
+
+.cthulhu7 .resource-max {
+    text-align: right;
+    padding: 3px 10px 0 0;
+    grid-area: r-max;
+}
+
+.cthulhu7 .resource-now {
+    grid-area: r-now;
+}
+
+.cthulhu7 .control-bar {
+    margin: 5px 0 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    text-align: center;
+}
+
+.cthulhu7 .skill-chart {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(15, 20px);
+    grid-auto-flow: column;
+}
+
+.cthulhu7 .skill-cell {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+
+.cthulhu7 .rating {
+    width: 40px;
+}
+
+.cthulhu7 .sheet-tabs {
+    font-size: large;
+    padding: 10px;
+}
+
+.cthulhu7.chat-card .roll-label {
+    font-weight: bold;
+    text-align: center;
+}
+
+.cthulhu7 .roll-dice {
+    font-size: large;
+    text-align: center;
+}
+
+.cthulhu7 .roll-result {
+    text-align: center;
+}
+
+.cthulhu7 .gear-charts {
+    display: flex;
+    flex-direction: row;
+}
+
+.cthulhu7 .weapon-chart {
+    flex: 2;
+}
+
+.cthulhu7 .weapon-row {
+    display: grid;
+    grid-template-columns: 30% 20% 10% 10% 10% 10% 10%;
+    grid-auto-flow: row;
+}
+
+.cthulhu7 .weapon-header {
+    font-weight: bold;
+}
+
+.cthulhu7 .spell-chart {
+    flex: 1;
+}
+
+.cthulhu7 .spell-row {
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    grid-auto-flow: row;
+}
+
+.cthulhu7 .spell-header {
+    font-weight: bold;
+}
+
+.cthulhu7 .tab.backstory {
+    height: 250px;
+}
+
+.cthulhu7 .item-form .sheet-body {
+    flex: 3;
+}
+
+.cthulhu7 .editor {
+    height: 100%
+}

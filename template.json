@@ -1,0 +1,114 @@
+{
+    "Actor": {
+        "types": ["investigator", "npc"],
+        "templates": {
+            "common": {
+                "characteristics": {
+                    "str": {"label": "Strength", "rating": 0},
+                    "con": {"label": "Constitution", "rating": 0},
+                    "siz": {"label": "Size", "rating": 0},
+                    "dex": {"label": "Dexterity", "rating": 0},
+                    "app": {"label": "Appearance", "rating": 0},
+                    "int": {"label": "Intelligence", "rating": 0},
+                    "pow": {"label": "Power", "rating": 0},
+                    "edu": {"label": "Education", "rating": 0}
+                },
+                "resources": {
+                    "hp": {"label": "Hit Points", "max": 0, "now": 0},
+                    "mp": {"label": "Magic Points", "max": 0, "now": 0},
+                    "san": {"label": "Sanity", "max": 0, "now": 0},
+                    "luck": {"label": "Luck", "max": 0, "now": 0}
+                },
+                "dmg": "0",
+                "build": 0
+            },
+            "pc": {
+                "bonusdice": 0,
+                "occupation": "",
+                "backstory": "",
+                "skills": {
+                    "accounting": {"label": "Accounting", "rename": false, "base": 5, "rating": 5, "check": false},
+                    "anthropology": {"label": "Anthropology", "rename": false, "base": 5, "rating": 5, "check": false},
+                    "appraise": {"label": "Appraise", "rename": false, "base": 5, "rating": 5, "check": false},
+                    "archaeology": {"label": "Archaeology", "rename": false, "base": 1, "rating": 1, "check": false},
+                    "art1": {"label": "Art/Craft", "rename": true, "base": 5, "rating": 5, "check": false},
+                    "art2": {"label": "Art/Craft", "rename": true, "base": 5, "rating": 5, "check": false},
+                    "art3": {"label": "Art/Craft", "rename": true, "base": 5, "rating": 5, "check": false},
+                    "charm": {"label": "Charm", "rename": false, "base": 15, "rating": 15, "check": false},
+                    "climb": {"label": "Climb", "rename": false, "base": 20, "rating": 20, "check": false},
+                    "credit": {"label": "Credit Rating", "rename": false, "base": 0, "rating": 0, "check": false},
+                    "cthulhu": {"label": "Cthulhu Mythos", "rename": false, "base": 0, "rating": 0, "check": false},
+                    "disguise": {"label": "Disguise", "rename": false, "base": 5, "rating": 5, "check": false},
+                    "dodge": {"label": "Dodge", "rename": false, "base": 0, "rating": 0, "check": false},
+                    "drive": {"label": "Drive Auto", "rename": false, "base": 20, "rating": 20, "check": false},
+                    "electric": {"label": "Elec. Repair", "rename": false, "base": 20, "rating": 20, "check": false},
+                    "fasttalk": {"label": "Fast Talk", "rename": false, "base": 5, "rating": 5, "check": false},
+                    "fight1": {"label": "Fighting (Brawl)", "rename": false, "base": 25, "rating": 25, "check": false},
+                    "fight2": {"label": "Fighting", "rename": true, "base": 0, "rating": 0, "check": false},
+                    "fight3": {"label": "Fighting", "rename": true, "base": 0, "rating": 0, "check": false},
+                    "firearm1": {"label": "Firearms (Handgun)", "rename": false, "base": 20, "rating": 20, "check": false},
+                    "firearm2": {"label": "Firearms (Rifle/Shotgun)", "rename": false, "base": 25, "rating": 25, "check": false},
+                    "firearm3": {"label": "Firearms", "rename": true, "base": 0, "rating": 0, "check": false},
+                    "firstaid": {"label": "First Aid", "rename": false, "base": 30, "rating": 30, "check": false},
+                    "history": {"label": "History", "rename": false, "base": 5, "rating": 5, "check": false},
+                    "intimidate": {"label": "Intimidate", "rename": false, "base": 15, "rating": 15, "check": false},
+                    "jump": {"label": "Jump", "rename": false, "base": 20, "rating": 20, "check": false},
+                    "language1": {"label": "Language", "rename": true, "base": 1, "rating": 1, "check": false},
+                    "language2": {"label": "Language", "rename": true, "base": 0, "rating": 0, "check": false},
+                    "language3": {"label": "Language", "rename": true, "base": 0, "rating": 0, "check": false},
+                    "language0": {"label": "Language (Own)", "rename": false, "base": 0, "rating": 0, "check": false},
+                    "law": {"label": "Law", "rename": false, "base": 5, "rating": 0, "check": false},
+                    "library": {"label": "Library Use", "rename": false, "base": 20, "rating": 20, "check": false},
+                    "listen": {"label": "Listen", "rename": false, "base": 20, "rating": 20, "check": false},
+                    "locksmith": {"label": "Locksmith", "rename": false, "base": 1, "rating": 1, "check": false},
+                    "mechanic": {"label": "Mech. Repair", "rename": false, "base": 10, "rating": 10, "check": false},
+                    "medicine": {"label": "Medicine", "rename": false, "base": 1, "rating": 1, "check": false},
+                    "natural": {"label": "Natural World", "rename": false, "base": 10, "rating": 10, "check": false},
+                    "navigate": {"label": "Navigate", "rename": false, "base": 10, "rating": 10, "check": false},
+                    "occult": {"label": "Occult", "rename": false, "base": 5, "rating": 5, "check": false},
+                    "operate": {"label": "Operate Hv. Machine", "rename": false, "base": 1, "rating": 1, "check": false},
+                    "persuade": {"label": "Persuade", "rename": false, "base": 10, "rating": 10, "check": false},
+                    "pilot": {"label": "Pilot", "rename": true, "base": 1, "rating": 1, "check": false},
+                    "psychology": {"label": "Psychology", "rename": false, "base": 10, "rating": 10, "check": false},
+                    "psychoanalysis": {"label": "Psychoanalysis", "rename": false, "base": 1, "rating": 1, "check": false},
+                    "ride": {"label": "Ride", "rename": false, "base": 5, "rating": 5, "check": false},
+                    "science1": {"label": "Science", "rename": true, "base": 1, "rating": 1, "check": false},
+                    "science2": {"label": "Science", "rename": true, "base": 0, "rating": 0, "check": false},
+                    "science3": {"label": "Science", "rename": true, "base": 0, "rating": 0, "check": false},
+                    "sleight": {"label": "Sleight of Hand", "rename": false, "base": 10, "rating": 10, "check": false},
+                    "spot": {"label": "Spot Hidden", "rename": false, "base": 25, "rating": 25, "check": false},
+                    "stealth": {"label": "Stealth", "rename": false, "base": 20, "rating": 20, "check": false},
+                    "survival": {"label": "Survival", "rename": false, "base": 10, "rating": 10, "check": false},
+                    "swim": {"label": "Swim", "rename": false, "base": 20, "rating": 20, "check": false},
+                    "throw": {"label": "Throw", "rename": false, "base": 20, "rating": 20, "check": false},
+                    "track": {"label": "Track", "rename": false, "base": 10, "rating": 10, "check": false},
+                    "other1": {"label": "", "rename": true, "base": 0, "rating": 0, "check": false},
+                    "other2": {"label": "", "rename": true, "base": 0, "rating": 0, "check": false},
+                    "other3": {"label": "", "rename": true, "base": 0, "rating": 0, "check": false},
+                    "other4": {"label": "", "rename": true, "base": 0, "rating": 0, "check": false},
+                    "other5": {"label": "", "rename": true, "base": 0, "rating": 0, "check": false}
+                }
+            }
+        },
+        "investigator": {
+            "templates": ["common", "pc"]
+        },
+        "npc": {
+            "templates": ["common"]
+        }
+    },
+    "Item": {
+        "types": ["weapon", "spell"],
+        "weapon": {
+            "name": "",
+            "damage": "",
+            "range": 0,
+            "attacks": 1,
+            "ammo": 0
+        },
+        "spell": {
+            "name": "",
+            "description": ""
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "cthulhu7",
+    "title": "Call of Cthulhu 7th Edition",
+    "description": "Support for the 7th edition of Chaosium's Call of Cthulhu RPG.",
+    "version": "0.0.1",
+    "minimumCoreVersion": "0.6.4",
+    "compatibleCoreVersion": "0.6.4",
+    "author": "Don Bisdorf",
+    "scripts": [],
+    "esmodules": ["modules/cthulhu7.js"],
+    "styles": ["styles/cthulhu7.css"],
+    "packs": [],
+    "manifest": "",
+    "download": ""
+}

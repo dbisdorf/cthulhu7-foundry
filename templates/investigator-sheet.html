@@ -1,0 +1,127 @@
+<form class="{{cssClass}}" autocomplete="off">
+
+    <header class="sheet-header">
+        <div class="header-image">
+            <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+        </div>
+        <div class="header-fields">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
+            </h1>
+
+            <div class="chr-chart">
+                {{#each data.characteristics as |chr key|}}
+                <div class="chr-cell">
+                    <div class="chr-label"><label class="rollable" data-target="{{chr.rating}}" data-label="{{chr.label}}" for="data.characteristics.{{key}}.rating">{{chr.label}}</label></div>
+                    <div class="chr-rating"><input class="rating" type="number" name="data.characteristics.{{key}}.rating" value="{{chr.rating}}" min="0" max="100" data-dtype="Number"/></div>
+                </div>
+                {{/each}}
+            </div>
+
+            <div class="resource-chart">
+                {{#each data.resources as |resource key|}}
+                <div class="resource-cell">
+                    <div class="resource-label">{{resource.label}}</div>
+                    <div class="resource-max">Max: {{resource.max}}</div>
+                    <div class="resource-now">
+                        <label for="data.resources.{{key}}.now">Now:</label>
+                        <input class="rating" type="number" name="data.resources.{{key}}.now" value={{resource.now}} min="0" max="{{resource.max}}" data-dtype="Number"/>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </header>
+
+    <div class="control-bar">
+        <div>
+            <label for="data.bonusdice">Bonus/Penalty Dice:</label>
+            <select name="data.bonusdice">
+                {{#select data.bonusdice}}
+                <option value="3">3 Bonus</option>
+                <option value="2">2 Bonus</option>
+                <option value="1">1 Bonus</option>
+                <option value="0">None</option>
+                <option value="-1">1 Penalty</option>
+                <option value="-2">2 Penalty</option>
+                <option value="-3">3 Penalty</option>
+                {{/select}}
+            </select>
+        </div>
+    
+        <div>
+            <button type="button" class="recover-button">Recover All</button>
+        </div>
+        
+        <div>
+            <button type="button" class="improve-button">Improve All</button>
+        </div>
+    </div>
+
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="skills">Skills</a>
+        <a class="item" data-tab="gear">Gear</a>
+        <a class="item" data-tab="backstory">Backstory</a>
+    </nav>
+
+    <section class="sheet-body">
+
+        <div class="tab skills" data-group="primary" data-tab="skills">
+            <div class="skill-chart">
+                {{#each data.skills as |skill key|}}
+                <div class="skill-cell">
+                    <div><input type="checkbox" name="data.skills.{{key}}.check" {{checked skill.check}} /></div>
+                    <div><label class="rollable" data-target="{{skill.rating}}" data-label="{{skill.label}}" for="data.skills.{{key}}.rating">{{skill.label}}</label></div>
+                    <div><input class="rating" type="number" name="data.skills.{{key}}.rating" value="{{skill.rating}}" min="{{skill.base}}" max="100" data-dtype="Number"/></div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="tab gear" data-group="primary" data-tab="gear">
+            <div class="gear-charts">
+                <div class="weapon-chart">
+                    <div class="weapon-row weapon-header">
+                        <div>Weapon</div>
+                        <div>Damage</div>
+                        <div>Range</div>
+                        <div>Attacks</div>
+                        <div>Ammo</div>
+                        <div></div>
+                        <button class="item-create" data-item-type="weapon">Add</button>
+                    </div>
+                    {{#each actor.weapons as |weapon id|}}
+                    <div class="weapon-row item-row" data-item-id="{{weapon._id}}">
+                        <div>{{weapon.name}}</div>
+                        <div>{{weapon.data.damage}}</div>
+                        <div>{{weapon.data.range}}</div>
+                        <div>{{weapon.data.attacks}}</div>
+                        <div>{{weapon.data.ammo}}</div>
+                        <button class="item-edit">Edit</button>
+                        <button class="item-delete">Delete</button>
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="spell-chart">
+                    <div class="spell-row spell-header">
+                        <div>Spell/Talent</div>
+                        <div></div>
+                        <button class="item-create" data-item-type="spell">Add</button>
+                    </div>
+                    {{#each actor.spells as |spell id|}}
+                    <div class="spell-row item-row" data-item-id="{{spell._id}}">
+                        <div>{{spell.name}}</div>
+                        <button class="item-edit">Edit</button>
+                        <button class="item-delete">Delete</button>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    
+        <div class="tab backstory" data-group="primary" data-tab="backstory">
+            {{editor content=data.backstory target="data.backstory" button=true owner=owner editable=editable}}
+        </div>
+
+    </section>
+</form>
